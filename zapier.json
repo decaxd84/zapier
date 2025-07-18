@@ -1,14 +1,25 @@
 {
-  "type": "object",
-  "properties": {
-    "title": {"type": "string"},
-    "url": {"type": "string"},
-    "rationale": {"type": "string"},
-    "topic": {"type": "string"}
-  },
-  "required": [
-   "url",
-   "topic"
-  ],
-  "additionalProperties": false
+  "name": "string_table",
+  "strict": true,
+  "schema": {
+    "type": "object",
+    "properties": {
+      "rows": {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+          "type": "object",
+          "properties": {
+            "title": { "type": "string" },
+            "topic": { "type": "string" },
+            "url":   { "type": "string", "format": "uri" }
+          },
+          "required": ["title", "topic", "url"],
+          "additionalProperties": false
+        }
+      }
+    },
+    "required": ["rows"],
+    "additionalProperties": false
+  }
 }
