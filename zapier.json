@@ -1,19 +1,14 @@
 {
   "type": "object",
   "properties": {
-    "topics": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "title":      { "type": "string"   },
-          "rationale":  { "type": "string"   },
-          "hook":       { "type": "string"   },
-          "urls":       {"type": "string"   },
-        "additionalProperties": false
-      }
-    }
+    "title": {"type": "string"},
+    "url": {"type": "string"}
+    "rationale": {"type": "string"},
+    "topic": {"type": "string"}
   },
-  "required": ["topics"],
+  "required": [
+   "url",
+   "topic"
+  ],
   "additionalProperties": false
 }
