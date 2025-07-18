@@ -2,7 +2,7 @@
   "type": "object",
   "properties": {
     "title": {"type": "string"},
-    "url": {"type": "string"}
+    "url": {"type": "string"},
     "rationale": {"type": "string"},
     "topic": {"type": "string"}
   },
